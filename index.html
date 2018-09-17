@@ -11,30 +11,55 @@
         </div>
         <div class="column">
             <div class="left-side">
+                <label class="controllerLabel">Set To</label>
                 <p>
                 <div class="control">
-                    <button class="arrow up"></button>
-                    <span class="setTemp">72</span>
-                    <button class="arrow down"></button>
+                    <button id="increaseTemp" class="arrow up"></button>
+                    <span id="setTemp">72&degF</span>
+                    <button id="decreaseTemp" class="arrow down"></button>
                 </div>
                 </p>
                 <label class="outsideLabel">Outside</label>
                 <div class="outsideTemp temperature row">
-                    75
+                    75&degF
                 </div>
                 <label class="indoorsLabel">Indoors</label>
-                <div class="indoorTemp temperature row">
-                    68
+                <div id="indoorTemp" class="indoorTemp temperature row">
+                    68&degF
                 </div>
             </div>
         </div>
+        <!-- Error Modal -->
+        <div id="errModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Select a room to adjust temperature.</p>
+            </div>
+
+        </div>
         <div class="column">
             <div class="right-side">
-                <button class="office roomButton">Office</button>
-                <button class="livingRoom roomButton">Living Space</button>
-                <button class="bedroom1 roomButton">Bedroom 1</button>
-                <button class="bedroom2 roomButton">Bedroom 2</button>
-                <button class="master roomButton">Master Bedroom</button>
+                <button id="bedroom1" class="roomButton">Bedroom 1
+                    <p id="bedroom1Temp">77&degF</p>
+                </button>
+
+                <button id="office" class="roomButton">Office
+                    <p id="officeTemp">56&degF</p>
+                </button>
+                <button id="bedroom2" class="roomButton">Bedroom 2
+                    <p id="bedroom2Temp">45&degF</p>
+                </button>
+                <button id="hallway" class="roomButton">Hallway
+                    <!--<p id="hallwayTemp">45&degF</p>-->
+                </button>
+                <button id="master" class="roomButton">Master Bedroom
+                    <p id="masterTemp">82&degF</p>
+                </button>
+                <button id="livingRoom" class="roomButton">Living Space
+                    <p id="livingRoomTemp">102&degF</p>
+                </button>
             </div>
         </div>
     </div>
@@ -42,7 +67,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
     <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
     <script src="app.js"></script>
-    <script src="listingController.js"></script>
+    <script src="temperatureController.js"></script>
     <script src="listingFactory.js"></script>
   </body>
 </html>

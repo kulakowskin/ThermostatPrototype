@@ -1,73 +1,78 @@
-body{
-      background-color: #e4e4e4;
-}
+
 h1{
-      font-weight: bolder;
-      border-bottom-style: solid;
-      border-bottom-color: orange;
-      border-bottom-width: thick;
+    font-weight: bolder;
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+    border-bottom-width: thick;
+    padding: 0px 20px;
 }
 
-#searchBar {
-  margin: 15px 10px;
+.container {
+    margin-top: 5px;
+    margin-bottom: auto;
+    width: 800px;
+    height: 500px;
+    border: 1px solid #1447c8;
+    border-radius: 15px ;
+    padding: 0px 15px;
 }
 
-#sizing-addon1 {
-      padding: 0;
+.left-side {
+    margin-left: 20px;
 }
 
-.tableWrapper {
-  max-height: 400px;
-  overflow: auto;
-  border-style: solid;
-  border-color: #1447c8;
-  border-width: 2px;
-}
-.details{
-      white-space: pre-wrap;
+.row {
+    margin: 0px;
 }
 
-tr,
-th,
-td {
-      border: 1px solid #1447c8;
-      padding: 10px 15px;
-}
-th{
-      border-bottom-width: 2px;
-      background-color: #66b2e8;
-}
-tr:nth-child(even){background-color: #fbe4cd}
-
-#rm {
-      width: 20px;
+.outsideLabel, .indoorsLabel{
+    width: 110px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 2px;
 }
 
-#newInput{
-      margin: 20px 0;
-      width: 100%;
-      clear: both;
+.temperature{
+    margin: 1px 10px 0px 0px;
+    width: 110px;
+    height: 110px;
+    border: 1px solid #1447c8;
+    border-radius: 15px;
+    padding-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
-.input-group-addon,
-.form-control{
-      border-style: solid;
-      border-color: black;
+.outsideTemp {
+    margin-top: 5px
 }
 
-.input-group{
-      padding: 5px;
-}
-#btn-div{
-      padding-top: 12px;
-      padding-right: 6px;
-      font-size: 17px;
+.column {
+    float: left;
+    width: 50%;
 }
 
-.jumbotron{
-      background-color: #66b2e8;
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-.entryText{
-      font-size: 17px;
+.livingRoom {
+    background-image: url(images/livingRoom.png);
+    background-color: lightblue;
+    background-repeat: no-repeat;
+    padding: 0px;
+
+}
+.livingRoom:before {
+    content: url("images/livingRoom.png");
+    visibility: hidden;
+}
+
+.livingRoom:active {
+    background-image: url(images/livingRoom.png);
+    border: 8px solid #f1c232;
 }

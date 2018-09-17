@@ -17,10 +17,6 @@ h1{
     padding: 0px 15px;
 }
 
-.left-side {
-    margin-left: 20px;
-}
-
 .row {
     margin: 0px;
 }
@@ -41,16 +37,22 @@ h1{
     padding-bottom: 0px;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 }
 
 .outsideTemp {
     margin-top: 5px
 }
 
-.column {
+.right-side {
     float: left;
-    width: 50%;
+    width: 65%;
+    margin-top: 20px;
+}
+.left-side {
+    margin-left: 20px;
+    float: left;
+    width: 30%;
 }
 
 /* Clear floats after the columns */
@@ -60,19 +62,88 @@ h1{
     clear: both;
 }
 
+
+/*
+Living Room button
+*/
 .livingRoom {
-    background-image: url(images/livingRoom.png);
+    width: 200px;
+    height: 200px
+}
+
+/*
+Office Button
+*/
+.office {
+    width: 130px;
+    height: 100px;
+}
+
+/*
+bedroom1 Button
+*/
+.bedroom1 {
+    width: 130px;
+    height: 100px;
+}
+
+/*
+bedroom2 Button
+*/
+.bedroom2 {
+    width: 140px;
+    height: 90px;
+}
+
+/*
+master Button
+*/
+.master {
+    width: 150px;
+    height: 100px;
+    transition: .5s ease;
+    top: 50%;
+    left: 50%;
+}
+
+.roomButton {
     background-color: lightblue;
-    background-repeat: no-repeat;
+    margin: 0px !important;
     padding: 0px;
-
+    border: 1px solid black;
+    display: inline-block;
 }
-.livingRoom:before {
-    content: url("images/livingRoom.png");
-    visibility: hidden;
-}
-
-.livingRoom:active {
-    background-image: url(images/livingRoom.png);
+.roomButton:active {
     border: 8px solid #f1c232;
+}
+
+/*
+temperature control buttons
+ */
+.control {
+    margin-left: 16px;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+}
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.setTemp {
+    margin-left: 10px;
+    margin-right: 10px;
 }
